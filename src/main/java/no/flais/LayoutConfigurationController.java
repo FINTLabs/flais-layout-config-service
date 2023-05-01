@@ -7,7 +7,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/layout/configuration")
+@RequestMapping("/configuration")
 public class LayoutConfigurationController {
 
     private final LayoutConfigurationRepository repository;

@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/api/layout/menu")
+@RequestMapping("/menu")
 public class MenuController {
 
     private final LayoutConfigurationRepository repository;
