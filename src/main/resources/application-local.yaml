@@ -1,0 +1,6 @@
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/flais_layout_config_service
+    username: postgres
+    password: postgres

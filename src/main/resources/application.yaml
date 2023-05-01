@@ -6,9 +6,9 @@ spring:
       fail-on-empty-beans: false
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/flais_layout_config_service
-    username: postgres
-    password: postgres
+    url: ${fint.database.url}
+    username: ${fint.database.username}
+    password: ${fint.database.password}
   jpa:
     properties:
       hibernate:
