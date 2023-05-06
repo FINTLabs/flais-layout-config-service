@@ -27,6 +27,7 @@ public class AppBarMenuMainLayout {
     private MenuPodlet menu;
 
     @OneToMany(mappedBy = "appBarMenuMainLayout", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OrderBy("menuOrder asc")
     private Set<MainPodlet> main = new LinkedHashSet<>();
 
 }

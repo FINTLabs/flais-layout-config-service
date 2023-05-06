@@ -15,6 +15,9 @@ public class MainPodlet extends Podlet {
 
     private String title;
     private String icon;
+    @Column(nullable = false)
+    private int menuOrder;
+
     @JsonIgnore
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "appbar_menu_main_layout_id")
