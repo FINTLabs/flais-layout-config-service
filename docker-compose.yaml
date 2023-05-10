@@ -6,10 +6,11 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=flais_layout_config_service
     ports:
       - '5432:5432'
     volumes:
-      - db:/var/lib/postgresql/data
+      - ./db-data/:/var/lib/postgresql/data
 volumes:
   db:
     driver: local
