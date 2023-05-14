@@ -17,9 +17,6 @@ spring:
     password: ${fint.database.password}
     hikari:
       schema: ${fint.database.username}
-      idle-timeout: 10000
-      maximum-pool-size: 1
-      pool-name: layout-config-service
   flyway:
     locations: classpath:db/migration/
     lock-retry-count: 300
