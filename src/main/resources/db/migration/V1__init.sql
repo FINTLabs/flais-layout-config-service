@@ -1,0 +1,10 @@
+create sequence hibernate_sequence start 1 increment 1;
+create table app_bar_podlet (id int8 not null, name varchar(255), path varchar(255), title varchar(255), uri varchar(255), primary key (id));
+create table appbar_menu_main_layout (id int8 not null, app_bar_podlet_id int8, menu_podlet_id int8, primary key (id));
+create table layout_configuration (id int8 not null, base_path varchar(255), name varchar(255), appbar_menu_main_layout_id int8, primary key (id));
+create table main_podlet (id int8 not null, name varchar(255), path varchar(255), title varchar(255), uri varchar(255), icon varchar(255), menu_order int4 not null, appbar_menu_main_layout_id int8, primary key (id));
+create table menu_podlet (id int8 not null, name varchar(255), path varchar(255), title varchar(255), uri varchar(255), primary key (id));
+alter table appbar_menu_main_layout add constraint FK2p0xbji7o7mxtauu5vpy7jgho foreign key (app_bar_podlet_id) references app_bar_podlet;
+alter table appbar_menu_main_layout add constraint FKqqxdke87wotshj4twplbh7rrm foreign key (menu_podlet_id) references menu_podlet;
+alter table layout_configuration add constraint FKjj35yarr9oodkttkbb6ci0lap foreign key (appbar_menu_main_layout_id) references appbar_menu_main_layout;
+alter table main_podlet add constraint FKew8dfchset7k3d0thntd3nvyy foreign key (appbar_menu_main_layout_id) references appbar_menu_main_layout;

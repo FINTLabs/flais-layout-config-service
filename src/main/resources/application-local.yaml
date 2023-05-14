@@ -1,8 +1,10 @@
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/flais_layout_config_service
+    url: jdbc:postgresql://localhost:5432/test
     username: postgres
     password: postgres
+    hikari:
+      schema: fintlabs_no
   webflux:
     base-path: /api/layout
